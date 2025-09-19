@@ -1,0 +1,5 @@
+1. open Git Bash
+2. go to: cd Documents/Projects/adm-reporting-app)
+3. git add .
+4. git commit -m "Initial project setup with HTML, CSS, and JS files"
+5. git push
