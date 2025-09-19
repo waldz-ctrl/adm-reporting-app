@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Reporting Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .login-icon a {
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>ADM Report Submissions</h1>
+            <div class="login-icon">
+                <a href="login.html" title="Login/Register">👤</a>
+            </div>
+        </div>
+        <p>This dashboard shows an overview of ADM report submissions.</p>
+        
+        <div id="data-visualization">
+            <h3>Submission Status (Placeholder)</h3>
+            <p>75 Schools have submitted.</p>
+            <p>25 Schools have not submitted.</p>
+        </div>
+        
+        <hr>
+
+        <div id="latest-plans">
+            <h2>Latest ADM Plans</h2>
+            <p>Loading latest plans...</p>
+        </div>
+    </div>
+    
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

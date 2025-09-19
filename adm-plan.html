@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Plan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>ADM Plan</h1>
+                <h3 id="school-name-header">School Name</h3>
+            </div>
+            <button id="add-plan-btn" class="btn">Add New Plan</button>
+        </div>
+        <a href="main.html">&larr; Back to Main Menu</a>
+
+        <div id="form-message"></div>
+
+        <h2>Previous Plans</h2>
+        <table id="plans-table">
+            <thead>
+                <tr>
+                    <th>Suspension Date</th>
+                    <th>Reason</th>
+                    <th>Levels Affected</th>
+                    <th>Recovery Plan</th>
+                </tr>
+            </thead>
+            <tbody id="plans-table-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div id="plan-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>New ADM Plan</h2>
+                <span class="close-button">&times;</span>
+            </div>
+            <form id="adm-plan-form">
+                <div class="form-group">
+                    <label for="suspension-date">Date of Class Suspension</label>
+                    <input type="date" id="suspension-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason of Suspension</label>
+                    <select id="reason" required>
+                        <option value="">-- Select Reason --</option>
+                        <option>Typhoon</option>
+                        <option>Heavy Rainfall</option>
+                        <option>Cultural Activities</option>
+                        <option>Trainings/Programs/Seminars</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Levels Affected</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="levels" value="Kinder"> Kinder</label>
+                        <label><input type="checkbox" name="levels" value="Kinder to G6"> Kinder to G6</label>
+                        <label><input type="checkbox" name="levels" value="Kinder to G10"> Kinder to G10</label>
+                        <label><input type="checkbox" name="levels" value="Kinder to G12"> Kinder to G12</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="recovery-plan">Learning Recovery Plan</label>
+                    <select id="recovery-plan" required>
+                        <option value="">-- Select Plan --</option>
+                        <option value="Modular">Modular</option>
+                        <option value="Saturday Class">Saturday Class</option>
+                        <option value="Extension Class">Extension Class</option>
+                    </select>
+                </div>
+                <div id="plan-details-section" class="form-group hidden">
+                    </div>
+                <button type="submit" class="btn">Save Plan</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/common.js"></script>
+    <script src="js/adm-plan.js"></script>
+</body>
+</html>

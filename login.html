@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - ADM Reporting</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <h1>Login</h1>
+            <form id="login">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>No account? <a href="#" id="show-register">Register here</a></p>
+            </form>
+        </div>
+
+        <div id="register-form" style="display: none;">
+            <h1>Register</h1>
+            <form id="register">
+                 <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="schoolName">School Name</label>
+                    <input type="text" id="schoolName" required>
+                </div>
+                 <div class="form-group">
+                    <label for="schoolType">School Type</label>
+                    <select id="schoolType" required>
+                        <option value="">-- Select Type --</option>
+                        <option value="Elementary">Elementary</option>
+                        <option value="Secondary">Secondary</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </form>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

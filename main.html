@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Reporting Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1 id="welcome-message">Welcome!</h1>
+            <button id="logout-btn" class="btn btn-danger">Logout</button>
+        </div>
+        <p>Please select a report to create or view.</p>
+        
+        <a href="adm-plan.html" class="btn">ADM Plan</a>
+        <a href="adm-accomplishment.html" class="btn btn-secondary">ADM Accomplishment Report (Coming Soon)</a>
+        <a href="lr-damages.html" class="btn btn-secondary">Report on LR Damages (Coming Soon)</a>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = protectPage(); // Protect this page
+            if(user) {
+                document.getElementById('welcome-message').textContent = `Welcome, ${user.schoolName}!`;
+            }
+            document.getElementById('logout-btn').addEventListener('click', logout);
+        });
+    </script>
+</body>
+</html>
